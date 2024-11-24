@@ -1,3 +1,32 @@
 <resources>
+    <!-- Nombre de la app -->
     <string name="app_name">Fundacion Abuelos</string>
+    <!-- Títulos y subtítulos -->
+    <string name="title_module">Fundación Abuelos</string>
+    <string name="subtitle_module">Registro Sedes</string>
+    <!-- Labels para los inputs -->
+    <string name="label_nombre_sede">Nombre de la Sede</string>
+    <string name="label_numero_registro">Número de Registro</string>
+    <string name="label_ciudad_barrio">Ciudad/Barrio</string>
+    <string name="label_direccion">Dirección</string>
+    <string name="label_telefono">Teléfono</string>
+    <string name="label_nombre_encargado">Nombre Encargado</string>
+    <string name="label_correo_electronico">Correo Electrónico</string>
+    <string name="label_capacidad">Capacidad</string>
+    <string name="label_numero_habitaciones">Número de Habitaciones</string>
+    <string name="label_habitaciones_disponibles">Habitaciones Disponibles</string>
+    <!-- HinText inputs -->
+    <string name="hint_nombre_sede">Ingrese el nombre de la sede</string>
+    <string name="hint_numero_registro">Ingrese el número de registro</string>
+    <string name="hint_ciudad_barrio">Ingrese la ciudad o barrio</string>
+    <string name="hint_direccion">Ingrese la dirección</string>
+    <string name="hint_telefono">Ingrese el teléfono</string>
+    <string name="hint_nombre_encargado">Ingrese el nombre del encargado</string>
+    <string name="hint_correo_electronico">example@gmail.com</string>
+    <string name="hint_capacidad">Ingrese la capacidad</string>
+    <string name="hint_numero_habitaciones">N°</string>
+    <string name="hint_habitaciones_disponibles">H.Disponibles</string>
+    <!-- Botones -->
+    <string name="button_agregar">Agregar</string>
+    <string name="button_cancelar">Cancelar</string>
 </resources>

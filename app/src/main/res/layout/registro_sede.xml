@@ -1,19 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_module"
+            style="@style/Title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Subtitle"
+            android:text="@string/subtitle_module"
+            android:layout_gravity="center" />
+
+
+        <!--INPUT NOMBRE DE LA SEDE-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nombre_sede"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_nombre_sede"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+        <!--INPUT NUMERO DE REGISTRO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_numero_registro"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_numero_registro"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"
+                android:inputType="number" />
+        </LinearLayout>
+        <!--INPUT Ciudad/Barrio-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_ciudad_barrio"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_ciudad_barrio"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+        <!--INPUT Dirección-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:paddingTop="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_direccion"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.23"/>
+
+            <EditText
+                android:paddingTop="5dp"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="4"
+                android:hint="@string/hint_direccion"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+        <!--INPUT Telefono-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_telefono"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.23"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="4"
+                android:hint="@string/hint_telefono"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"
+                android:inputType="number"/>
+        </LinearLayout>
+        <!--INPUT NOMBRE Encargado-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nombre_encargado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_nombre_encargado"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+        <!--INPUT Correo Electronico-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_correo_electronico"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_correo_electronico"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+        <!--INPUT Capacidad-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:paddingTop="10dp"
+                style="@style/PrimaryLabel"
+                android:layout_width="0dp"
+                android:layout_height="41dp"
+                android:layout_gravity=""
+                android:layout_weight="1"
+                android:text="@string/label_capacidad" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.3"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_capacidad"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"
+                android:inputType="number"/>
+        </LinearLayout>
+        <!--INPUT NUMERO DE ABITACIONES-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="@string/label_numero_habitaciones"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.3"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_numero_habitaciones"
+                android:background="@drawable/border_inputs"
+                style="@style/PrimaryHint"
+                android:inputType="number"/>
+        </LinearLayout>
+        <!--INPUT Habitaciones disponibles-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="@string/label_habitaciones_disponibles"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.3"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_habitaciones_disponibles"
+                android:background="@drawable/border_inputs"
+                android:inputType="number"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+
+
+
+        <!-- Acciones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:weightSum="2">
+
+            <!-- Botón Actualizar -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_agregar"
+                android:backgroundTint="#227050"
+                android:layout_marginRight="16dp"
+                app:icon="@drawable/add_button"/>
+
+            <!-- Botón Cancelar -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_cancelar"
+                android:backgroundTint="#2f3033"
+                app:icon="@drawable/delete_button"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
