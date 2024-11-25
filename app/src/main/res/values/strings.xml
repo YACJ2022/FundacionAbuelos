@@ -5,6 +5,7 @@
     <string name="title_module">Fundación Abuelos</string>
     <string name="subtitle_module">Registro Sedes</string>
     <string name="registro_empleados">Registro de empleados</string>
+    <string name="registro_enfermer">Registro de Enfermer@</string>
 
     <!-- Labels para los inputs -->
     <string name="label_nombre_sede">Nombre de la Sede</string>
@@ -28,6 +29,11 @@
     <string name="label_correo_empleado">Correo electrónico</string>
     <string name="label_cargo_especializacion_empleado">Cargo/Especialización</string>
 
+    <string name="label_identifcacion_Enfermer">Número de identificación</string>
+    <string name="label_numero_pacientes_Enfermer">Número de pacientes asignados</string>
+
+
+
     <!-- HinText inputs -->
     <string name="hint_nombre_sede">Ingrese el nombre de la sede</string>
     <string name="hint_numero_registro">Ingrese el número de registro</string>
@@ -49,6 +55,9 @@
     <string name="hint_direccion_empleado">Ingrese la dirección del empleado</string>
     <string name="hint_correo_empleado">Ingrese el correo electrónico</string>
     <string name="hint_cargo_especializacion_empleado">Ingrese el cargo o especialización</string>
+
+    <string name="hint_identifcacion_Enfermer">Ingrese el número de identificación</string>
+    <string name="hint_numero_pacientes_Enfermer">Ingrese el número de pacientes asignados</string>
 
     <!-- Botones -->
     <string name="button_agregar">Agregar</string>

@@ -1,10 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainEnfermer">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:id="@+id/mainEmpleados"
+    tools:context=".MainEmpleados"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <!-- Títulos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_module"
+            style="@style/Title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Subtitle"
+            android:text="@string/registro_enfermer"
+            android:layout_gravity="center" />
+
+        <!-- Imagen de perfil -->
+        <ImageView
+            android:id="@+id/perfilUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/user_temp" />
+
+        <!-- Opciones de carga de imagen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="150dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/uploaduser"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/upload_user" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp" />
+
+            <ImageView
+                android:id="@+id/screenImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/tomar_image"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Bloques de inputs -->
+        <!-- Nombres -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nombre_empleado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_nombre_empleado"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Apellidos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_apellido_empleado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_apellido_empleado"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Numero de identificación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_identifcacion_Enfermer"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_identifcacion_Enfermer"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Fecha de nacimiento -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_fecha_nacimiento_empleado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:id="@+id/DatePickerFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_fecha_nacimiento_empleado"
+                style="@style/PrimaryHint"
+                android:clickable="false"
+                android:focusable="false"/>
+        </LinearLayout>
+
+        <!-- Telefono -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_telefono_empleado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_telefono_empleado"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Dirección -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_direccion_empleado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_direccion_empleado"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Correo electronico -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_correo_empleado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_correo_empleado"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Cargo/Especialidad -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Cargo/Especialización"
+                android:textColor="#b7b4b7"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_cargo_especializacion_empleado"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    <!-- Numero de pacientes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_numero_pacientes_Enfermer"
+            style="@style/PrimaryLabel"
+            android:layout_gravity=""/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/border_inputs"
+            android:hint="@string/hint_numero_pacientes_Enfermer"
+            android:inputType="number"
+            style="@style/PrimaryHint"/>
+    </LinearLayout>
+
+
+        <!-- Acciones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:weightSum="2">
+
+            <!-- Botón Actualizar -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar"
+                android:backgroundTint="#227050"
+                android:layout_marginRight="16dp"
+                app:icon="@drawable/add_button" />
+
+            <!-- Botón Cancelar -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:backgroundTint="#2f3033"
+                app:icon="@drawable/delete_button" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
