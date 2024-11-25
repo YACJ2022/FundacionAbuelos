@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.fup.sisexper.fundacionabuelos"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.fup.sisexper.fundacionabuelos"
