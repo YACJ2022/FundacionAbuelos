@@ -61,7 +61,9 @@
                 android:id="@+id/screenImage"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/tomar_image" />
+                android:src="@drawable/tomar_image"
+                android:clickable="true"
+                android:focusable="true"/>
         </LinearLayout>
 
         <!-- Bloques de inputs -->
