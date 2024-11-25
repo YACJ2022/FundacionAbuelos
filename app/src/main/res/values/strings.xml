@@ -4,6 +4,8 @@
     <!-- Títulos y subtítulos -->
     <string name="title_module">Fundación Abuelos</string>
     <string name="subtitle_module">Registro Sedes</string>
+    <string name="registro_empleados">Registro de empleados</string>
+
     <!-- Labels para los inputs -->
     <string name="label_nombre_sede">Nombre de la Sede</string>
     <string name="label_numero_registro">Número de Registro</string>
@@ -15,6 +17,17 @@
     <string name="label_capacidad">Capacidad</string>
     <string name="label_numero_habitaciones">Número de Habitaciones</string>
     <string name="label_habitaciones_disponibles">Habitaciones Disponibles</string>
+
+    <string name="label_nombre_empleado">Nombres</string>
+    <string name="label_apellido_empleado">Apellidos</string>
+    <string name="label_identificacion_empleado">Número de identificación</string>
+    <string name="label_fecha_nacimiento_empleado">Fecha de nacimiento</string>
+    <string name="label_telefono_empleado">Teléfono</string>
+    <string name="label_ciudadBarrio_empleado">Ciudad/Barrio</string>
+    <string name="label_direccion_empleado">Dirección</string>
+    <string name="label_correo_empleado">Correo electrónico</string>
+    <string name="label_cargo_especializacion_empleado">Cargo/Especialización</string>
+
     <!-- HinText inputs -->
     <string name="hint_nombre_sede">Ingrese el nombre de la sede</string>
     <string name="hint_numero_registro">Ingrese el número de registro</string>
@@ -26,6 +39,17 @@
     <string name="hint_capacidad">Ingrese la capacidad</string>
     <string name="hint_numero_habitaciones">N°</string>
     <string name="hint_habitaciones_disponibles">H.Disponibles</string>
+
+    <string name="hint_nombre_empleado">Ingrese el nombre del empleado</string>
+    <string name="hint_apellido_empleado">Ingrese los apellidos del empleado</string>
+    <string name="hint_identificacion_empleado">Ingrese el número de identificación</string>
+    <string name="hint_fecha_nacimiento_empleado">Seleccione la fecha de nacimiento</string>
+    <string name="hint_ciudadBarrio_empleado">Ingrese ciudad o barrio</string>
+    <string name="hint_telefono_empleado">Ingrese el número de teléfono</string>
+    <string name="hint_direccion_empleado">Ingrese la dirección del empleado</string>
+    <string name="hint_correo_empleado">Ingrese el correo electrónico</string>
+    <string name="hint_cargo_especializacion_empleado">Ingrese el cargo o especialización</string>
+
     <!-- Botones -->
     <string name="button_agregar">Agregar</string>
     <string name="button_cancelar">Cancelar</string>
