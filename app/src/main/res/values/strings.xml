@@ -6,6 +6,8 @@
     <string name="subtitle_module">Registro Sedes</string>
     <string name="registro_empleados">Registro de empleados</string>
     <string name="registro_enfermer">Registro de Enfermer@</string>
+    <string name="registro_InfoAbuelos">Información básica</string>
+    <string name="Medicamentos_InfoAbuelos">Medicamentos</string>
 
     <!-- Labels para los inputs -->
     <string name="label_nombre_sede">Nombre de la Sede</string>
@@ -32,6 +34,22 @@
     <string name="label_identifcacion_Enfermer">Número de identificación</string>
     <string name="label_numero_pacientes_Enfermer">Número de pacientes asignados</string>
 
+    <string name="label_edad_InfoAbue">Edad</string>
+    <string name="label_estadoCivil_InfoAbue">Estado civil</string>
+    <string name="label_peso_InfoAbue">Peso</string>
+    <string name="label_Estarura_InfoAbue">Estatura</string>
+    <string name="label_tallaCamisa_InfoAbue">Talla de camisa</string>
+    <string name="label_tallaPantalon_InfoAbue">Talla de pantalon</string>
+    <string name="label_fecha_ingreso_InfoAbue">Fecha de ingreso</string>
+    <string name="label_protesisDental_InfoAbue">¿Utiliza protesis dental?</string>
+    <string name="label_usaPañal_InfoAbue">¿Utiliza pañal?</string>
+    <string name="label_antecedentesPatolo_InfoAbue">Antecedentes patologicos</string>
+    <string name="label_nombreEPS_InfoAbue">Nombre de E.P.S</string>
+    <string name="label_afiliacion_InfoAbue">Tipo de afiliacion</string>
+    <string name="label_nombreMedicamento_InfoAbue">Nombre del medicamento</string>
+    <string name="label_horario_InfoAbue">Horario</string>
+    <string name="label_Cantidad_InfoAbue">Cantidad</string>
+
 
 
     <!-- HinText inputs -->
@@ -46,18 +64,34 @@
     <string name="hint_numero_habitaciones">N°</string>
     <string name="hint_habitaciones_disponibles">H.Disponibles</string>
 
-    <string name="hint_nombre_empleado">Ingrese el nombre del empleado</string>
-    <string name="hint_apellido_empleado">Ingrese los apellidos del empleado</string>
-    <string name="hint_identificacion_empleado">Ingrese el número de identificación</string>
+    <string name="hint_nombre_empleado">Ingrese el nombre</string>
+    <string name="hint_apellido_empleado">Ingrese los apellidos</string>
+    <string name="hint_identificacion_empleado">Ingrese el número</string>
     <string name="hint_fecha_nacimiento_empleado">Seleccione la fecha de nacimiento</string>
     <string name="hint_ciudadBarrio_empleado">Ingrese ciudad o barrio</string>
     <string name="hint_telefono_empleado">Ingrese el número de teléfono</string>
-    <string name="hint_direccion_empleado">Ingrese la dirección del empleado</string>
+    <string name="hint_direccion_empleado">Ingrese la dirección</string>
     <string name="hint_correo_empleado">Ingrese el correo electrónico</string>
     <string name="hint_cargo_especializacion_empleado">Ingrese el cargo o especialización</string>
 
     <string name="hint_identifcacion_Enfermer">Ingrese el número de identificación</string>
     <string name="hint_numero_pacientes_Enfermer">Ingrese el número de pacientes asignados</string>
+
+    <string name="hint_edad_InfoAbue">Ingrese la Edad</string>
+    <string name="hint_estadoCivil_InfoAbue">Ingrese el Estado civil</string>
+    <string name="hint_peso_InfoAbue">Ingrese el Peso</string>
+    <string name="hint_Estarura_InfoAbue">Ingrese la Estatura</string>
+    <string name="hint_tallaCamisa_InfoAbue">Ingrese la Talla de camisa</string>
+    <string name="hint_tallaPantalon_InfoAbue">Ingrese la Talla de pantalon</string>
+    <string name="hint_fecha_ingreso_infoAbue">Seleccione la fecha de ingreso</string>
+    <string name="hint_protesisDental_InfoAbue">Seleccione</string>
+    <string name="hint_usaPañal_InfoAbue">Seleccione</string>
+    <string name="hint_antecedentesPatolo_InfoAbue">Ingrese antecedentes patologicos</string>
+    <string name="hint_nombreEPS_InfoAbue">Ingrese el nombre de E.P.S</string>
+    <string name="hint_afiliacion_InfoAbue">Ingrese tipo de afiliacion</string>
+    <string name="hint_nombreMedicamento_InfoAbue">Ingrese el nombre del medicamento</string>
+    <string name="hint_horario_InfoAbue">Ingrese horario</string>
+    <string name="hint_Cantidad_InfoAbue">Ingrese cantidad</string>
 
     <!-- Botones -->
     <string name="button_agregar">Agregar</string>

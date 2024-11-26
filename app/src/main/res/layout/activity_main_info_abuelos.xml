@@ -1,10 +1,501 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainInfoAbuelos">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:id="@+id/mainEmpleados"
+    tools:context=".MainEmpleados"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <!-- Títulos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_module"
+            style="@style/Title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Subtitle"
+            android:text="@string/registro_InfoAbuelos"
+            android:layout_gravity="center" />
+
+        <!-- Imagen de perfil -->
+        <ImageView
+            android:id="@+id/perfilUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/user_temp" />
+
+        <!-- Opciones de carga de imagen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="150dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/uploaduser"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/upload_user" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp" />
+
+            <ImageView
+                android:id="@+id/screenImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/tomar_image"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Bloques de inputs -->
+        <!-- Nombres -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nombre_empleado"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_nombre_empleado"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Edad -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_edad_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_edad_InfoAbue"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Numero de direccion -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_direccion"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_direccion"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Fecha de ingreso -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_fecha_ingreso_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:id="@+id/DatePickerFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_fecha_ingreso_infoAbue"
+                style="@style/PrimaryHint"
+                android:clickable="false"
+                android:focusable="false"/>
+        </LinearLayout>
+
+        <!-- Estado Civil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_estadoCivil_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_estadoCivil_InfoAbue"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Peso -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_peso_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_peso_InfoAbue"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Estatura -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_Estarura_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_Estarura_InfoAbue"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Talla Camisa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tallaCamisa_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_tallaCamisa_InfoAbue"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Talla Pantalon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tallaPantalon_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_tallaPantalon_InfoAbue"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Utiliza protesis -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/label_protesisDental_InfoAbue"
+                android:textColor="#b7b4b7"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_protesisDental_InfoAbue"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Utiliza pañal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/label_usaPañal_InfoAbue"
+                android:textColor="#b7b4b7"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_usaPañal_InfoAbue"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete2_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Antecedentes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_antecedentesPatolo_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_antecedentesPatolo_InfoAbue"
+                android:inputType="number"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- EPS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nombreEPS_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_nombreEPS_InfoAbue"
+                android:inputType="number"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Afiliacion -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_afiliacion_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/label_afiliacion_InfoAbue"
+                android:inputType="number"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <!-- Subtitle second -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Subtitle"
+            android:text="@string/Medicamentos_InfoAbuelos"
+            android:layout_gravity="center" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <!-- Nombre del medicamento -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nombreMedicamento_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_nombreMedicamento_InfoAbue"
+                android:inputType="number"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- horario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_horario_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_horario_InfoAbue"
+                android:inputType="number"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Cantidad -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_Cantidad_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_Cantidad_InfoAbue"
+                android:inputType="number"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+
+        <!-- Acciones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:weightSum="2">
+
+            <!-- Botón Actualizar -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar"
+                android:backgroundTint="#227050"
+                android:layout_marginRight="16dp"
+                app:icon="@drawable/add_button" />
+
+            <!-- Botón Cancelar -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:backgroundTint="#2f3033"
+                app:icon="@drawable/delete_button" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
