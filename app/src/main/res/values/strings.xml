@@ -8,6 +8,7 @@
     <string name="registro_enfermer">Registro de Enfermer@</string>
     <string name="registro_InfoAbuelos">Información básica</string>
     <string name="Medicamentos_InfoAbuelos">Medicamentos</string>
+    <string name="Acudiente_InfoAbuelos">Información del acudiente</string>
 
     <!-- Labels para los inputs -->
     <string name="label_nombre_sede">Nombre de la Sede</string>
@@ -49,6 +50,7 @@
     <string name="label_nombreMedicamento_InfoAbue">Nombre del medicamento</string>
     <string name="label_horario_InfoAbue">Horario</string>
     <string name="label_Cantidad_InfoAbue">Cantidad</string>
+    <string name="label_parentesco_InfoAbue">Tipo de parentesco</string>
 
 
 
@@ -92,6 +94,7 @@
     <string name="hint_nombreMedicamento_InfoAbue">Ingrese el nombre del medicamento</string>
     <string name="hint_horario_InfoAbue">Ingrese horario</string>
     <string name="hint_Cantidad_InfoAbue">Ingrese cantidad</string>
+    <string name="hint_parentesco_InfoAbue">Ingrese el tipo de parentesco</string>
 
     <!-- Botones -->
     <string name="button_agregar">Agregar</string>

@@ -41,11 +41,12 @@
 
         <!-- Opciones de carga de imagen -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="150dp"
+            android:paddingLeft="0dp"
             android:layout_gravity="center">
+
 
             <ImageView
                 android:id="@+id/uploaduser"
@@ -64,6 +65,7 @@
                 android:src="@drawable/tomar_image"
                 android:clickable="true"
                 android:focusable="true"/>
+
         </LinearLayout>
 
         <!-- Bloques de inputs -->
@@ -463,7 +465,129 @@
                 style="@style/PrimaryHint"/>
         </LinearLayout>
 
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
 
+        <!-- Subtitle second -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Subtitle"
+            android:text="@string/Acudiente_InfoAbuelos"
+            android:layout_gravity="center" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    <!-- Nombre completo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_nombre_empleado"
+            style="@style/PrimaryLabel"
+            android:layout_gravity=""/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/border_inputs"
+            android:hint="@string/hint_nombre_empleado"
+            style="@style/PrimaryHint"/>
+    </LinearLayout>
+
+        <!-- Tipo parentesco  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_parentesco_InfoAbue"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_parentesco_InfoAbue"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Telefono  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_telefono"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:inputType="number"
+                android:hint="@string/hint_telefono"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- Dirección  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_direccion"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_direccion"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
+
+        <!-- correo  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_correo_electronico"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_correo_electronico"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
         <!-- Acciones -->
         <LinearLayout
             android:layout_width="match_parent"
