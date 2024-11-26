@@ -44,12 +44,14 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextNombreSede"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_nombre_sede"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
+
         <!--INPUT NUMERO DE REGISTRO-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,13 +66,15 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextNumeroRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/hint_numero_registro"
                 android:background="@drawable/border_inputs"
                 style="@style/PrimaryHint"
-                android:inputType="number" />
+                android:inputType="number"/>
         </LinearLayout>
+
         <!--INPUT Ciudad/Barrio-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,12 +89,14 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextCiudadBarrio"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/hint_ciudad_barrio"
                 android:background="@drawable/border_inputs"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
+
         <!--INPUT Dirección-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,6 +118,7 @@
                 android:layout_weight="0.23"/>
 
             <EditText
+                android:id="@+id/editTextDireccion"
                 android:paddingTop="5dp"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
@@ -120,6 +127,7 @@
                 android:background="@drawable/border_inputs"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
+
         <!--INPUT Telefono-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -140,6 +148,7 @@
                 android:layout_weight="0.23"/>
 
             <EditText
+                android:id="@+id/editTextTelefono"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="4"
@@ -148,6 +157,7 @@
                 style="@style/PrimaryHint"
                 android:inputType="number"/>
         </LinearLayout>
+
         <!--INPUT NOMBRE Encargado-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -162,12 +172,14 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextNombreEncargado"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/hint_nombre_encargado"
                 android:background="@drawable/border_inputs"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
+
         <!--INPUT Correo Electronico-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -182,12 +194,14 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextCorreoElectronico"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/hint_correo_electronico"
                 android:background="@drawable/border_inputs"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
+
         <!--INPUT Capacidad-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -210,6 +224,7 @@
                 android:layout_weight="0.3"/>
 
             <EditText
+                android:id="@+id/editTextCapacidad"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
@@ -218,7 +233,8 @@
                 style="@style/PrimaryHint"
                 android:inputType="number"/>
         </LinearLayout>
-        <!--INPUT NUMERO DE ABITACIONES-->
+
+        <!--INPUT NUMERO DE HABITACIONES-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -235,9 +251,9 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="35dp"
-                android:layout_weight="0.3"
-                />
+                android:layout_weight="0.3"/>
             <EditText
+                android:id="@+id/editTextNumeroHabitaciones"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
@@ -246,6 +262,7 @@
                 style="@style/PrimaryHint"
                 android:inputType="number"/>
         </LinearLayout>
+
         <!--INPUT Habitaciones disponibles-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -254,8 +271,9 @@
             android:paddingBottom="8dp">
 
             <TextView
+                android:paddingTop="5dp"
                 android:layout_width="0dp"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/label_habitaciones_disponibles"
                 style="@style/PrimaryLabel"
@@ -263,16 +281,16 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="35dp"
-                android:layout_weight="0.3"/>
-
+                android:layout_weight="0.23"/>
             <EditText
+                android:id="@+id/editTextHabitacionesDisponibles"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_weight="1"
+                android:layout_weight="4"
                 android:hint="@string/hint_habitaciones_disponibles"
                 android:background="@drawable/border_inputs"
-                android:inputType="number"
-                style="@style/PrimaryHint"/>
+                style="@style/PrimaryHint"
+                android:inputType="number"/>
         </LinearLayout>
 
 
