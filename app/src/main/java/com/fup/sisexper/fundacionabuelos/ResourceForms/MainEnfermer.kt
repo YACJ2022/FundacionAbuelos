@@ -1,4 +1,4 @@
-package com.fup.sisexper.fundacionabuelos
+package com.fup.sisexper.fundacionabuelos.ResourceForms
 
 import android.content.ContentValues
 import android.content.Intent
@@ -15,6 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.fup.sisexper.fundacionabuelos.R
 
 class MainEnfermer : AppCompatActivity() {
     private lateinit var datePickerFechaNacimiento: EditText
