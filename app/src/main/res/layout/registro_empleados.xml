@@ -41,10 +41,10 @@
 
         <!-- Opciones de carga de imagen -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="150dp"
+            android:paddingLeft="0dp"
             android:layout_gravity="center">
 
             <ImageView
@@ -78,14 +78,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_nombre_empleado"
-                style="@style/PrimaryLabel"
-                android:layout_gravity=""/>
+                style="@style/PrimaryLabel" />
             <EditText
+                android:id="@+id/nombreEmpleado"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_nombre_empleado"
-                style="@style/PrimaryHint"/>
+                style="@style/PrimaryHint" />
         </LinearLayout>
 
         <!-- Apellidos -->
@@ -99,14 +99,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_apellido_empleado"
-                style="@style/PrimaryLabel"
-                android:layout_gravity=""/>
+                style="@style/PrimaryLabel" />
             <EditText
+                android:id="@+id/apellidoEmpleado"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_apellido_empleado"
-                style="@style/PrimaryHint"/>
+                style="@style/PrimaryHint" />
         </LinearLayout>
 
         <!-- Ciudad/Barrio -->
@@ -120,14 +120,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_ciudadBarrio_empleado"
-                style="@style/PrimaryLabel"
-                android:layout_gravity=""/>
+                style="@style/PrimaryLabel" />
             <EditText
+                android:id="@+id/ciudadBarrioEmpleado"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_ciudadBarrio_empleado"
-                style="@style/PrimaryHint"/>
+                style="@style/PrimaryHint" />
         </LinearLayout>
 
         <!-- Fecha de nacimiento -->
@@ -141,8 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_fecha_nacimiento_empleado"
-                style="@style/PrimaryLabel"
-                android:layout_gravity=""/>
+                style="@style/PrimaryLabel" />
             <EditText
                 android:id="@+id/DatePickerFechaNacimiento"
                 android:layout_width="match_parent"
@@ -151,10 +150,10 @@
                 android:hint="@string/hint_fecha_nacimiento_empleado"
                 style="@style/PrimaryHint"
                 android:clickable="false"
-                android:focusable="false"/>
+                android:focusable="false" />
         </LinearLayout>
 
-        <!-- Telefono -->
+        <!-- Teléfono -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -165,14 +164,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_telefono_empleado"
-                style="@style/PrimaryLabel"
-                android:layout_gravity=""/>
+                style="@style/PrimaryLabel" />
             <EditText
+                android:id="@+id/telefonoEmpleado"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_telefono_empleado"
-                style="@style/PrimaryHint"/>
+                style="@style/PrimaryHint" />
         </LinearLayout>
 
         <!-- Dirección -->
@@ -186,17 +185,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_direccion_empleado"
-                style="@style/PrimaryLabel"
-                android:layout_gravity=""/>
+                style="@style/PrimaryLabel" />
             <EditText
+                android:id="@+id/direccionEmpleado"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_direccion_empleado"
-                style="@style/PrimaryHint"/>
+                style="@style/PrimaryHint" />
         </LinearLayout>
 
-        <!-- Correo electronico -->
+        <!-- Correo electrónico -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -207,16 +206,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_correo_empleado"
-                style="@style/PrimaryLabel"
-                android:layout_gravity=""/>
+                style="@style/PrimaryLabel" />
             <EditText
+                android:id="@+id/correoEmpleado"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_correo_empleado"
-                style="@style/PrimaryHint"/>
+                style="@style/PrimaryHint" />
         </LinearLayout>
-
         <!-- Cargo/Especialidad -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -257,6 +255,7 @@
 
             <!-- Botón Actualizar -->
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/agregarInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Agregar"
@@ -266,6 +265,7 @@
 
             <!-- Botón Cancelar -->
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancelar"

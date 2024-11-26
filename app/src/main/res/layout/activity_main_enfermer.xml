@@ -41,10 +41,10 @@
 
         <!-- Opciones de carga de imagen -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="150dp"
+            android:paddingLeft="0dp"
             android:layout_gravity="center">
 
             <ImageView
@@ -67,6 +67,7 @@
         </LinearLayout>
 
         <!-- Bloques de inputs -->
+
         <!-- Nombres -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,6 +82,7 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextNombre"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
@@ -102,6 +104,7 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextApellidos"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
@@ -123,6 +126,7 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextIdentificacion"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
@@ -168,6 +172,7 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextTelefono"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
@@ -189,6 +194,7 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
@@ -210,6 +216,7 @@
                 style="@style/PrimaryLabel"
                 android:layout_gravity=""/>
             <EditText
+                android:id="@+id/editTextCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
@@ -246,28 +253,27 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-    <!-- Numero de pacientes -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="8dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_numero_pacientes_Enfermer"
-            style="@style/PrimaryLabel"
-            android:layout_gravity=""/>
-        <EditText
+        <!-- Numero de pacientes -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/border_inputs"
-            android:hint="@string/hint_numero_pacientes_Enfermer"
-            android:inputType="number"
-            style="@style/PrimaryHint"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_numero_pacientes_Enfermer"
+                style="@style/PrimaryLabel"
+                android:layout_gravity=""/>
+            <EditText
+                android:id="@+id/editTextNumeroPacientes"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_inputs"
+                android:hint="@string/hint_numero_pacientes_Enfermer"
+                style="@style/PrimaryHint"/>
+        </LinearLayout>
 
         <!-- Acciones -->
         <LinearLayout
