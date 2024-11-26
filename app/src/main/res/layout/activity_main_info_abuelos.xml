@@ -335,7 +335,6 @@
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_antecedentesPatolo_InfoAbue"
-                android:inputType="number"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
 
@@ -357,7 +356,6 @@
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_nombreEPS_InfoAbue"
-                android:inputType="number"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
 
@@ -379,7 +377,6 @@
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/label_afiliacion_InfoAbue"
-                android:inputType="number"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
 
@@ -419,7 +416,6 @@
                 android:layout_height="48dp"
                 android:background="@drawable/border_inputs"
                 android:hint="@string/hint_nombreMedicamento_InfoAbue"
-                android:inputType="number"
                 style="@style/PrimaryHint"/>
         </LinearLayout>
 

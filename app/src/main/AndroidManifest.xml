@@ -20,10 +20,10 @@
             android:name=".MainEnfermer"
             android:exported="false" />
         <activity
-            android:name=".MainEmpleados"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainEmpleados"
             android:exported="false" />
         <activity
             android:name=".MainInfoAbuelos"
