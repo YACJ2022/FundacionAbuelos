@@ -126,5 +126,5 @@
         android:background="@drawable/floating_button_background"
         android:contentDescription="Agregar Empleado"
         android:elevation="4dp"
-        android:src="@drawable/ic_add" />
+        android:src="@drawable/add_button" />
 </LinearLayout>

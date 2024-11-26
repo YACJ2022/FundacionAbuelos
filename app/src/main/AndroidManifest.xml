@@ -20,7 +20,7 @@
             android:name=".ResourceForms.Formularios.MainEnfermer"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ResourceForms.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ResourceForms.Formularios.MainEmpleados"

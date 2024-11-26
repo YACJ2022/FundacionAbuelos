@@ -10,8 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.contactos.GestioDeUsuarios.Empleados.EmpleadoPersonalizado
-import com.fup.sisexper.fundacionabuelos.MainActivity
 import com.fup.sisexper.fundacionabuelos.R
+import com.fup.sisexper.fundacionabuelos.ResourceForms.MainActivity
+
 class listaPersonalizada : AppCompatActivity() {
     private lateinit var listado: ListView
     override fun onCreate(savedInstanceState: Bundle?) {

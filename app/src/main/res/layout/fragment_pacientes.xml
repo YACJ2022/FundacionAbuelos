@@ -130,7 +130,7 @@
         android:layout_height="56dp"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_add"
+        android:src="@drawable/add_button"
         android:background="@drawable/floating_button_background"
         android:contentDescription="Agregar Paciente"
         android:elevation="4dp" />

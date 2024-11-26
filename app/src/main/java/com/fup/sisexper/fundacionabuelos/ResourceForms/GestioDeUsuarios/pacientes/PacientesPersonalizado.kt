@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.contactos.GestioDeUsuarios.Empleados.EmpleadoPersonalizado
+import com.example.contactos.GestioDeUsuarios.Enfermeras.EnfermeroPersonalizado
 import com.fup.sisexper.fundacionabuelos.R
 import com.fup.sisexper.fundacionabuelos.ResourceForms.Formularios.MainInfoAbuelos
 
@@ -68,7 +69,7 @@ class PacientesPersonalizado :  AppCompatActivity() {
         }
 
         btnEnfermeros.setOnClickListener {
-            val intent = Intent(this, PacientesPersonalizado::class.java)
+            val intent = Intent(this, EnfermeroPersonalizado::class.java)
             startActivity(intent)
         }
 
