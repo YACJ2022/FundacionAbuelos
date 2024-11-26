@@ -1,0 +1,140 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/enfermerasview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="19dp"
+            android:text="Fundación Abuelos"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tituloEnfermeros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enfermeros"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="center"
+                android:textColor="#4B5563"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bordes"
+
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnEmpleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:background="#00C853"
+                android:backgroundTint="#00C853"
+                android:text="Empleados"
+                android:textSize="32px" />
+
+            <Button
+                android:id="@+id/btnEnfermeros"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rounded_bottom_nav"
+                android:layout_marginEnd="6dp"
+                android:layout_toStartOf="@+id/btnPaciente"
+                android:layout_toEndOf="@+id/btnEmpleado"
+                android:text="Enfermeros"
+                android:textSize="32px" />
+
+            <Button
+                android:id="@+id/btnPaciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_bottom_nav"
+                android:textSize="32px"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:text="Pacientes" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchEnfermeros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Buscar Enfermero"
+                android:imeOptions="actionSearch" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- RecyclerView para la lista de enfermeros -->
+
+    <!-- Botón flotante para agregar un enfermero -->
+    <ListView
+        android:id="@+id/listaEnfermera"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="17dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="14dp"
+        android:itemBackground="@drawable/bordes"
+        android:padding="10dp"
+        android:paddingBottom="2dp" />
+
+
+
+    <!-- Botón flotante para agregar un enfermero -->
+    <ImageView
+        android:id="@+id/addEnfermero"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="-36dp"
+        android:background="@drawable/floating_button_background"
+        android:contentDescription="Agregar Enfermero"
+        android:elevation="4dp"
+        android:src="@drawable/ic_add" />
+
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.fup.sisexper.fundacionabuelos
+package com.fup.sisexper.fundacionabuelos.ResourceForms.Formularios
 
 import android.content.ContentValues
 import android.content.Intent
@@ -10,13 +10,13 @@ import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.fup.sisexper.fundacionabuelos.R
 
-class MainEnfermer : AppCompatActivity() {
+class MainEmpleados : AppCompatActivity() {
     private lateinit var datePickerFechaNacimiento: EditText
     private lateinit var autoCompleteTxt: AutoCompleteTextView
     private lateinit var adapterItems: ArrayAdapter<String>
@@ -41,8 +41,8 @@ class MainEnfermer : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main_enfermer)
+        setContentView(R.layout.registro_empleados)
+
         // Inicializar la funcionalidad de la cámara
         buttonCamera = findViewById(R.id.screenImage)
         buttonCamera.setOnClickListener {
@@ -72,12 +72,14 @@ class MainEnfermer : AppCompatActivity() {
         datePickerFechaNacimiento = findViewById(R.id.DatePickerFechaNacimiento)
         datePickerFechaNacimiento.setOnClickListener { showDatePickerDialog() }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        // Configurar ajustes de padding para bordes de ventana (EdgeToEdge)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainEmpleados)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
     }
+
     // Función para mostrar el DatePicker
     private fun showDatePickerDialog() {
         val datePicker = DatePicker { day, month, year ->
@@ -85,6 +87,7 @@ class MainEnfermer : AppCompatActivity() {
         }
         datePicker.show(supportFragmentManager, "DatePicker")
     }
+
     // Función para manejar la fecha seleccionada
     private fun onDateSelect(day: Int, month: Int, year: Int) {
         datePickerFechaNacimiento.setText("$day/$month/$year")
@@ -93,20 +96,13 @@ class MainEnfermer : AppCompatActivity() {
     // Función para guardar la imagen en la galería
     private fun saveImageToGallery(photo: Bitmap) {
         val contentValues = ContentValues().apply {
-            put(
-                MediaStore.Images.Media.DISPLAY_NAME,
-                "captured_image_${System.currentTimeMillis()}.jpg"
-            )
+            put(MediaStore.Images.Media.DISPLAY_NAME, "captured_image_${System.currentTimeMillis()}.jpg")
             put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
-            put(
-                MediaStore.Images.Media.RELATIVE_PATH,
-                "Pictures/FundacionAbuelos"
-            ) // Directorio personalizado
+            put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/FundacionAbuelos") // Directorio personalizado
         }
 
         val contentResolver = contentResolver
-        val uri =
-            contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+        val uri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
 
         if (uri != null) {
             contentResolver.openOutputStream(uri)?.use { outputStream ->
@@ -117,8 +113,7 @@ class MainEnfermer : AppCompatActivity() {
                     Toast.makeText(this, "Error al guardar la imagen", Toast.LENGTH_SHORT).show()
                 }
             } ?: run {
-                Toast.makeText(this, "No se pudo abrir el flujo de salida", Toast.LENGTH_SHORT)
-                    .show()
+                Toast.makeText(this, "No se pudo abrir el flujo de salida", Toast.LENGTH_SHORT).show()
             }
         } else {
             Toast.makeText(this, "Error al guardar la imagen", Toast.LENGTH_SHORT).show()

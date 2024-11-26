@@ -1,0 +1,130 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/empleadoView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <!-- Título y Barra de Búsqueda -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fundación Abuelos"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:text="Empleados"
+                android:textColor="#4B5563"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bordes"
+
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnEmpleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:background="#00C853"
+                android:backgroundTint="#00C853"
+                android:text="Empleados"
+                android:textSize="32px" />
+
+            <Button
+                android:id="@+id/btnEnfermeros"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rounded_bottom_nav"
+                android:layout_marginEnd="6dp"
+                android:layout_toStartOf="@+id/btnPaciente"
+                android:layout_toEndOf="@+id/btnEmpleado"
+                android:text="Enfermeros"
+                android:textSize="32px" />
+
+            <Button
+                android:id="@+id/btnPaciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_bottom_nav"
+                android:textSize="32px"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:text="Pacientes" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Buscar Empleado"
+                android:imeOptions="actionSearch" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- RecyclerView para Empleados -->
+    <ListView
+        android:id="@+id/listaEmpleados"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="17dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="14dp"
+        android:itemBackground="@drawable/bordes"
+        android:padding="10dp"
+        android:paddingBottom="2dp" />
+
+
+    <!-- Botón para Agregar Empleados -->
+    <ImageView
+        android:id="@+id/addEmpleado"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="16dp"
+        android:background="@drawable/floating_button_background"
+        android:contentDescription="Agregar Empleado"
+        android:elevation="4dp"
+        android:src="@drawable/ic_add" />
+</LinearLayout>

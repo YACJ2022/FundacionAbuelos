@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="true"
     android:id="@+id/mainEmpleados"
-    tools:context=".MainEmpleados"
+    tools:context=".ResourceForms.Formularios.MainEmpleados"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

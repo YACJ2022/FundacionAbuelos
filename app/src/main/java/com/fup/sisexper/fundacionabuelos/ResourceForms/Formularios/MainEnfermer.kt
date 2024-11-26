@@ -1,4 +1,4 @@
-package com.fup.sisexper.fundacionabuelos
+package com.fup.sisexper.fundacionabuelos.ResourceForms.Formularios
 
 import android.content.ContentValues
 import android.content.Intent
@@ -15,8 +15,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.fup.sisexper.fundacionabuelos.R
 
-class MainInfoAbuelos : AppCompatActivity() {
+class MainEnfermer : AppCompatActivity() {
     private lateinit var datePickerFechaNacimiento: EditText
     private lateinit var autoCompleteTxt: AutoCompleteTextView
     private lateinit var adapterItems: ArrayAdapter<String>
@@ -42,7 +43,7 @@ class MainInfoAbuelos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main_info_abuelos)
+        setContentView(R.layout.activity_main_enfermer)
         // Inicializar la funcionalidad de la cámara
         buttonCamera = findViewById(R.id.screenImage)
         buttonCamera.setOnClickListener {
@@ -57,16 +58,10 @@ class MainInfoAbuelos : AppCompatActivity() {
         }
 
         // Inicializar el DropDown
-        val items = arrayOf("Si", "No")
+        val items = arrayOf("Enfermero General", "Enfermero Asistente", "Jefe de Enfermería", "Coordinador de Enfermería", "Supervisor de Enfermería")
         autoCompleteTxt = findViewById(R.id.auto_complete_txt)
         adapterItems = ArrayAdapter(this, R.layout.list_item_form, items)
         autoCompleteTxt.setAdapter(adapterItems)
-
-        autoCompleteTxt = findViewById(R.id.auto_complete2_txt)
-        adapterItems = ArrayAdapter(this, R.layout.list_item_form, items)
-        autoCompleteTxt.setAdapter(adapterItems)
-
-
 
         // Listener para ítems seleccionados
         autoCompleteTxt.setOnItemClickListener { parent, _, position, _ ->
