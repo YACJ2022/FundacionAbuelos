@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     // Declarar variables globales para los campos de entrada
     private lateinit var nombreSede: EditText
-    private lateinit var numeroRegistro: EditText
+//    private lateinit var numeroRegistro: EditText
     private lateinit var ciudad: EditText
     private lateinit var barrio: EditText
     private lateinit var direccion: EditText
@@ -60,17 +60,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun inicializarComponentes() {
         // Inicialización de los campos de entrada
-        nombreSede = findViewById(R.id.etNombreSede)
-        numeroRegistro = findViewById(R.id.etNumeroRegistro)
-        ciudad = findViewById(R.id.etCiudad)
-        barrio = findViewById(R.id.etBarrio)
-        direccion = findViewById(R.id.etDireccion)
-        telefono = findViewById(R.id.etTelefono)
-        nombreEncargado = findViewById(R.id.etNombreEncargado)
-        correoElectronico = findViewById(R.id.etCorreoElectronico)
-        capacidad = findViewById(R.id.etCapacidad)
-        numeroHabitaciones = findViewById(R.id.etNumeroHabitaciones)
-        habitacionesDisponibles = findViewById(R.id.etHabitacionesDisponibles)
+        nombreSede = findViewById(R.id.editTextNombreSede)
+//      numeroRegistro = findViewById(R.id.editTextNumeroRegistro)
+        ciudad = findViewById(R.id.editTextCiudad)
+        barrio = findViewById(R.id.editTextBarrio)
+//        direccion = findViewById(R.id.editTextDireccion)
+//        telefono = findViewById(R.id.editTextTelefono)
+//        nombreEncargado = findViewById(R.id.editTextNombreEncargado)
+//        correoElectronico = findViewById(R.id.editTextCorreoElectronico)
+        capacidad = findViewById(R.id.editTextCapacidad)
+//        numeroHabitaciones = findViewById(R.id.editTextNumeroHabitaciones)
+        habitacionesDisponibles = findViewById(R.id.editTextHabitacionesDisponibles)
 
         // Inicialización de los botones
         btnAgregar = findViewById(R.id.btnAgregar)
@@ -82,15 +82,15 @@ class MainActivity : AppCompatActivity() {
         if (validarCampos()) {
             val nuevaSede = item(
                 nombre = nombreSede.text.toString(),
-                numeroRegistro = numeroRegistro.text.toString().toInt(),
+//                numeroRegistro = numeroRegistro.text.toString().toInt(),
                 ciudad = ciudad.text.toString(),
                 barrio = barrio.text.toString(),
                 direccion = direccion.text.toString(),
-                telefono = telefono.text.toString(),
-                nombreEncargado = nombreEncargado.text.toString(),
-                correoElectronico = correoElectronico.text.toString(),
+//                telefono = telefono.text.toString(),
+//                nombreEncargado = nombreEncargado.text.toString(),
+//                correoElectronico = correoElectronico.text.toString(),
                 capacidad = capacidad.text.toString().toInt(),
-                numeroHabitaciones = numeroHabitaciones.text.toString().toInt(),
+//                numeroHabitaciones = numeroHabitaciones.text.toString().toInt(),
                 habitacionesDisponibles = habitacionesDisponibles.text.toString().toInt(),
                 imagen = R.drawable.ic_enfermeras // Ajusta según tus necesidades
             )
@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun validarCampos(): Boolean {
         return nombreSede.text.isNotEmpty() &&
-                numeroRegistro.text.isNotEmpty() &&
+    //            numeroRegistro.text.isNotEmpty() &&
                 ciudad.text.isNotEmpty() &&
                 barrio.text.isNotEmpty() &&
                 direccion.text.isNotEmpty() &&

@@ -57,7 +57,7 @@ class listaPersonalizada : AppCompatActivity() {
                         val intent =
                             Intent(this@listaPersonalizada, EmpleadoPersonalizado::class.java)
                         intent.putExtra("nombre", selectedSede.nombre)
-                        intent.putExtra("encargado", selectedSede.nombreEncargado)
+            //            intent.putExtra("encargado", selectedSede.nombreEncargado)
                         intent.putExtra("imagen", "drawable/fud_prot.png")
                         startActivity(intent)
 
