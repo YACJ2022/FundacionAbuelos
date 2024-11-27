@@ -2,6 +2,7 @@ package com.example.contactos.Sedes
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Toast
@@ -11,7 +12,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.contactos.GestioDeUsuarios.Empleados.EmpleadoPersonalizado
 import com.fup.sisexper.fundacionabuelos.R
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import com.fup.sisexper.fundacionabuelos.ResourceForms.MainActivity
+import com.fup.sisexper.fundacionabuelos.ResourceForms.Service.RetroFitClient
 
 class listaPersonalizada : AppCompatActivity() {
     private lateinit var listado: ListView
@@ -25,42 +30,53 @@ class listaPersonalizada : AppCompatActivity() {
             insets
         }
         val add = findViewById<ImageView>(R.id.addButton)
-        listado = findViewById(R.id.lista)
-        val items = listOf(
-            item(
-                nombre = "Residencia La Esperanza",
-                encargado = "Ana Pérez",
-                imagen = R.drawable.fud_prot
-            ),
-
-            item(
-                nombre = "Residencia Los Pinos",
-                encargado = "Juan Gómez",
-                imagen = R.drawable.fud_prot
-            ),
-
-            item(
-                nombre = "Residencia El Bosque",
-                encargado = "Luisa Rodríguez",
-                imagen = R.drawable.fud_prot
-            ),
-
-        )
 
         add.setOnClickListener {
             Toast.makeText(this,  "Agregar nueva sede", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity ::class.java)
             startActivity(intent)
         }
-        val adaptador = SedeAdaptador(this, items)
-        listado.adapter= adaptador
 
-        listado.setOnItemClickListener { _, _, position, _ ->
-            val selectedSede = items[position]
-            val intent = Intent(this, EmpleadoPersonalizado::class.java)
-            intent.putExtra("nombre", selectedSede.nombre)
-            intent.putExtra("encargado", selectedSede.encargado)
-            startActivity(intent)
-        }
+        listado = findViewById(R.id.lista)
+        fetchSedes()
+    }
+
+    private fun fetchSedes() {
+        val apiService = RetroFitClient.apiService
+
+        apiService.obtenerSede().enqueue(object : Callback<List<item>> {
+            override fun onResponse(call: Call<List<item>>, response: Response<List<item>>) {
+                if (response.isSuccessful) {
+                    val sedes = response.body() ?: emptyList()
+                    val adaptador = SedeAdaptador(this@listaPersonalizada, sedes)
+                    listado.adapter = adaptador
+
+                    // Configurar acción al hacer clic en un ítem
+                    listado.setOnItemClickListener { _, _, position, _ ->
+                        val selectedSede = sedes[position]
+                        val intent =
+                            Intent(this@listaPersonalizada, EmpleadoPersonalizado::class.java)
+                        intent.putExtra("nombre", selectedSede.nombre)
+                        intent.putExtra("encargado", selectedSede.nombreEncargado)
+                        intent.putExtra("imagen", "drawable/fud_prot.png")
+                        startActivity(intent)
+
+                    }
+
+                } else {
+                    Toast.makeText(
+                        this@listaPersonalizada,
+                        "Error al cargar sedes",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            override fun onFailure(call: Call<List<item>>, t: Throwable) {
+                Log.e("ListaPersonalizada", "Error: ${t.message}")
+                Toast.makeText(this@listaPersonalizada, "Error de conexión", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        })
     }
 }

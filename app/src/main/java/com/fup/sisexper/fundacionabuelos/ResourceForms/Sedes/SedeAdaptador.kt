@@ -34,7 +34,7 @@ class SedeAdaptador(context: Context, private val items: List<item>):
 
 
         nameTextView.text = item.nombre
-        managerTextView.text = item.encargado
+        managerTextView.text = item.nombreEncargado
 
         Glide.with(context)
             .load(item.imagen)
